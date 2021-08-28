@@ -77,6 +77,7 @@ class _SleekCircularSliderState extends State<SleekCircularSlider>
       return;
     }
 
+    print("initState");
     widget.appearance.spinnerMode ? _spin() : _animate();
   }
 
@@ -86,6 +87,9 @@ class _SleekCircularSliderState extends State<SleekCircularSlider>
         _currentAngle?.toStringAsFixed(4) != widget.angle.toStringAsFixed(4)) {
       _animate();
     }
+
+    print("didUpdateWidget");
+
     super.didUpdateWidget(oldWidget);
   }
 
